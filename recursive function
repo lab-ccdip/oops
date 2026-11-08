@@ -1,0 +1,39 @@
+#include <iostream.h>
+#include <conio.h>
+
+class Recursive
+{
+    public:
+        int factorial(int n);
+};
+
+int Recursive::factorial(int n)
+{
+    if(n == 0)
+        return 1;
+    else
+        return n * factorial(n - 1);
+}
+
+void main()
+{
+    clrscr();
+
+    int number, result;
+
+    cout << "Enter number: ";
+    cin >> number;
+
+    if(number <= 0)
+    {
+        cout << "Error! Enter a positive number.";
+    }
+    else
+    {
+        Recursive r;
+        result = r.factorial(number);
+        cout << "Factorial = " << result;
+    }
+
+    getch();
+}
