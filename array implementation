@@ -1,0 +1,53 @@
+#include <iostream.h>
+#include <conio.h>
+
+void main()
+{
+    clrscr();
+
+    int n, i;
+    int arr[50];
+
+    cout << "Enter the number of elements: ";
+    cin >> n;
+
+    cout << "Enter the elements: ";
+
+    for(i = 0; i < n; i++)
+    {
+        cin >> arr[i];
+    }
+
+    int max = arr[0];
+    int min = arr[0];
+
+    int maxpos = 0;
+    int minpos = 0;
+
+    for(i = 1; i < n; i++)
+    {
+        if(arr[i] > max)
+        {
+            max = arr[i];
+            maxpos = i;
+        }
+
+        if(arr[i] < min)
+        {
+            min = arr[i];
+            minpos = i;
+        }
+    }
+
+    cout << "\nMaximum Number: " << max << endl;
+
+    cout << "Position of Maximum Number: "
+         << maxpos + 1 << endl;
+
+    cout << "Minimum Number: " << min << endl;
+
+    cout << "Position of Minimum Number: "
+         << minpos + 1 << endl;
+
+    getch();
+}
