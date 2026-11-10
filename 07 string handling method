@@ -1,0 +1,28 @@
+
+
+#include <iostream.h>
+#include <conio.h>
+#include <string.h>
+
+void main()
+{
+    clrscr();
+
+    char name[50];
+
+    cout << "Enter your name: ";
+    cin.getline(name, 50);
+
+    cout << "You entered: " << name << endl;
+    cout << "Length: " << strlen(name) << endl;
+
+    if(strlen(name) == 0)
+        cout << "String is empty!";
+    else
+        cout << "String is not empty.";
+
+    if(strlen(name) > 0)
+        cout << "\nLast character: " << name[strlen(name) - 1];
+
+    getch();
+}
