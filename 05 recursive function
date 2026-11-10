@@ -1,0 +1,29 @@
+
+
+#include <iostream.h>
+#include <conio.h>
+
+int reverse_number(int n, int rev)
+{
+    if(n == 0)
+        return rev;
+
+    return reverse_number(n / 10, rev * 10 + (n % 10));
+}
+
+void main()
+{
+    clrscr();
+
+    int number;
+
+    cout << "Enter a number: ";
+    cin >> number;
+
+    if(number < 0)
+        cout << "Reversed number: -" << reverse_number(-number, 0);
+    else
+        cout << "Reversed number: " << reverse_number(number, 0);
+
+    getch();
+}
