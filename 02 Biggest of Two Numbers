@@ -1,0 +1,24 @@
+
+#include <iostream.h>
+#include <conio.h>
+
+void main()
+{
+    clrscr();
+
+    int a, b;
+
+    cout << "Enter two numbers: ";
+    cin >> a >> b;
+
+    cout << "\n--- Finding the Biggest Number ---\n";
+
+    if(a == b)
+        cout << "Both numbers are equal." << endl;
+    else if(a > b)
+        cout << "The biggest number is: " << a << endl;
+    else
+        cout << "The biggest number is: " << b << endl;
+
+    getch();
+}
